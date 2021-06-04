@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Climate Change Dashboard</title>
+
+  <!--Boot Strap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Fonts from google -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Shade&family=Chathura:wght@800&family=Girassol&family=Karantina&family=Niconne&family=Odibee+Sans&family=Romanesco&display=swap" rel="stylesheet">
+  
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin="" />
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+
+  <!-- JQuery from google CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+<body class="bc_color-b">
+
+  <div class="container-fluid bc_color-b">
+    <!--row 1-->
+    <div class="row ml-5 mr-5 col-color">
+      <div class="col-xs-12 col-s-12 col-sm-10 col-md-10 col-lg-10 col-xl-10 text-left col-color" style='font-family:georgia;'>
+        <p class="pt-4 mb-0 font-italic set_font_size">Interactive Climate Change Dashboard</p> 
+      </div>
+      <div class="col-xs-12 col-s-12 col-md-2 col-lg-2 col-xl-2 set-img-col">
+        <div>
+           <a href="/" id="button" class="button5"><input class="w-100 img-set h-100"  alt="Responsive image" type="image" src="/static/Image/worldMap_button1.png" /></a>
+        </div>
+      </div>       
+    </div>
+    
+    <!--row 2-->
+    <div class="row row ml-5 mr-5 bc_color-w">
+      <div class="col-xs-12 col-s-12 col-md-2  border border-dark border-right-0 border-top-0 col-color">      
+        <div class="mt-4 col-color ">
+          <h5 class= "sel_opt">Select A Country</h5>
+          <select id="selDataset" class=" selDataset dropdown">
+          </select>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12 col-12 mt-5 p-0">
+              <div class="panel panel-primary">
+                <div class="panel-heading ">
+                  <h3 class="panel-title mt-5 set-panel">Demographic Info</h3>
+                </div>
+                <div id="demo-info" class="panel-body font-weight-bolder "></div>
+              </div>
+            </div>
+          </div>
+        </div>        
+      </div>
+      <div class="col-10 p-0 border border-dark rounded-lg">
+        <div id="map" class="container-fluid p-0" >
+          <div id="leaf" class= "text-center" style="background-color:black;"> 
+            <img class="w-50 map-background" src="http://2.bp.blogspot.com/-8P_iI3YueO0/T73feHn5VSI/AAAAAAAAAiw/N5N3HmVmk9I/s1600/6a00d834516a0869e2016760f339c3970b-800wi.jpg" alt="Big Smileys" />
+
+          </div>
+        </div>
+      </div>      
+  </div>
+  </div>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+
+   <!-- D3 JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+
+   <!--Plotly.js -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- Data.js -->
+  <!-- <script src="/static/js/data.js/src/index.js"></script> -->
+
+  <!-- Data file-->
+  <!-- <script src="static/data/ne_50m_admin_0_countries.geojson"></script> -->
+  <script src="/static/js/JQueryRenderHTML.js"></script>
+
+  <!-- API key -->
+  <script type="text/javascript" src="static/js/config.js"></script>
+
+  <!--Our javaScript file-->
+  <!---------------------------------------------->
+  <!-- Launch Page -->
+  <script src="/static/js/launch.js"></script>
+
+  <!-- Build Map-->
+  <script src="/static/js/map.js"></script> 
+ 
+  <!-- minimap js -->
+  <script src="/static/js/mimMap.js"></script>
+
+  <!-- Buld Scatter Plot -->
+  <script type="text/javascript" src="/static/js/scatterTempCO2.js"></script>
+
+  <!-- JQuery file to render DOM elements-->
+  <script src="/static/js/JQueryRenderHTML.js"></script>
+
+  <!-- Build Warming Strips Chart-->
+  <script src="/static/js/stripe_chart.js"></script>
+
+    <!-- Build Pie Chart Chart-->
+    <script src="/static/js/pieLineChart.js"></script>
+  
+  
+</body>
+
+</html>
