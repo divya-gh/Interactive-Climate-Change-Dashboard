@@ -145,11 +145,15 @@ country_df = pd.merge(country_demo_df, country_coord_df, on='name', how='left')
 from sqlalchemy import create_engine
 from api_keys import post_key
 
+''' #This part of the code only works for postgress database
 # create engine connection
 rds_connection_string = f"{post_key}:{post_key}@localhost:5432/ClimateChange_db"
 engine = create_engine(f'postgresql://{rds_connection_string}', echo=True)
 
 pgres_table = 'country_demo'
-country_df.to_sql(pgres_table, con=engine, if_exists='replace')
+country_df.to_sql(pgres_table, con=engine, if_exists='replace')'''
 
+
+#save file as csv
+country_df.to_csv('./static/data/country_demo.csv', encoding='utf-8')
 

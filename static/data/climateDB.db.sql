@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS "temp_change" (
 	"1987"	REAL,
 	"1988"	REAL,
 	"1989"	REAL,
-	"1990"	INTEGER,
+	"1990"	REAL,
 	"1991"	REAL,
 	"1992"	REAL,
 	"1993"	REAL,
@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS "temp_change" (
 	"2008"	REAL,
 	"2009"	REAL,
 	"2010"	REAL,
-	"2011"	INTEGER,
+	"2011"	REAL,
 	"2012"	REAL,
 	"2013"	REAL,
 	"2014"	REAL,
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS "CO2_emission" (
 	"Entity"	TEXT,
 	"Code"	TEXT,
 	"Year"	INTEGER,
-	"AnnualCO2emissions"	INTEGER,
+	"AnnualCO2emissions"	NUMERIC,
 	PRIMARY KEY("Year","Code")
 );
 DROP TABLE IF EXISTS "country_demo";

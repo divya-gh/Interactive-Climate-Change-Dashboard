@@ -11,8 +11,13 @@ from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, inspect, join, outerjoin, MetaData, Table
 from api_keys import post_key
 
+import json
+
 # create engine to postgres
-connect_string = f"postgresql://{post_key}:{post_key}@localhost:5432/ClimateChange_db"
+#connect_string = "sqlite:///static/data/climateDB.db"
+#connect_string = f"postgresql://{post_key}:{post_key}@localhost:5432/ClimateChange_db"
+connect_string = "postgresql://oaheorhjxkaftv:3148f648a78cb8638b4d9cce881182545de3c9854875a22dba0d128f1ae99419@ec2-34-193-112-164.compute-1.amazonaws.com:5432/d6v5es98cgcvov"
+
 
 # reflect the tables
 engine = create_engine(connect_string) 
@@ -30,7 +35,7 @@ Base.prepare(engine, reflect =True)
 Emission = Base.classes.CO2_emission
 Temp_change = Base.classes.temp_change
 Country_demo = Base.classes.country_demo
-#print(Emission)
+#print(Country_demo)
 
 # Create a session (link) from Python to the sqlite DB
 session = Session(bind = engine)
@@ -66,7 +71,7 @@ demo_sorted_df = demo_sorted_df.rename({"name":"Area","population":"Population",
                                         "density":"Density",
                                         "land-size":"Land Size","image_url":"Images",
                                         "latitude":"Lat","longitude":"Lng"},axis='columns')
-
+#print(demo_sorted_df)
 session.close() 
 
 
@@ -119,7 +124,10 @@ def launchPage() :
                         "Lat":popu_data.loc[country,"Lat"],
                         "Lng":popu_data.loc[country,"Lng"],
                         }
+        
         meta.append(temp_co2_obj)
+        
+        
 
     return meta , New_Countries
 
@@ -314,5 +322,7 @@ if __name__ == '__main__':
     #print('countries :' , unique_countries)
     avg_temp_by_months= get_months()
     # print(avg_temp_by_months)
-    launch = get_country_map("India")
-    #print(launch)
+    map = get_country_map("India")
+    #print(map)
+    meta, countries = launchPage()
+    #print(meta)
