@@ -39,7 +39,7 @@ Data rendered form python Flask API is then used to visualize data on the web cl
 - __Demographic Table :__ 
     - When a country on the map is clicked or selected from the dropdown menu, the demographic table will also update with country specific information.
 
-- __Charts:__  Built with leaflet.js, Plotly.js and D3.js
+- __Charts:__  Built with leaflet.js, Plotly.js and D3.js<br/>
 Once a country is chosen from the dropdown or map, it will render new charts that display information specific to that country. 
 
    - __Warming Stripes chart:__ 
