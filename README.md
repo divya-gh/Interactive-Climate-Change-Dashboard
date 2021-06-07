@@ -11,7 +11,7 @@ As a project, we have decided to look into the temperature changes of the differ
 | ------------------------------ | ------------- |
 | <img src="./static/Image/csv.png" alt="TP" align='left'  width="150" height="100">         |  **1. Temperature changes:** Data set found [here](https://www.kaggle.com/sevgisarac/temperature-change?select=Environment_Temperature_change_E_All_Data_NOFLAG.csv) shows the changes in temperature in each country from 1961 to 2019. The data is also split up into each month, so that you can compare January vs January, and by season. The changes go anywhere from 9&deg;C cooler to 11&deg;C warmer.<br/><br/> **2. CO2 Emissions:** Temperature fluctuations can be caused by many different events, one of which is CO2 emissions. Each country produces different amounts of CO2 dependent on their access to electricity, the total population, the urban population and other factors. We used the data from https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions and you can find the dataset [here](./static/data/CO2_emission.csv). |
 |         <img src="./static/Image/webScrape1.png" alt="TP" align='left'  width="150" height="100">                        |   **3. Country demographics:** Since the CO2 emissions can be influenced by the demographics of the country, the dashboard includes current demographics, as of May 2021, so that as you are reviewing the charts, you can see how the demographics might play a role. The demographics were scraped from three different websites using Beautiful Soup. After scraping the websites, the data was pushed into the sqlite database as an additional table.<br><br>- a. __Flags__ - https://www.worldometers.info/geography/flags-of-the-world/<br>- b. __Population__ - https://www.worldometers.info/world-population/population-by-country/<br>-  c. __Latitude and Longitude coordinates__ - https://developers.google.com/public-data/docs/canonical/countries_csv<br><br>-  *You can find the scrape code [here](./country_scrape.py).*  |
-|         <img src="./static/Image/Geojson.jpg" alt="TP" align='left'  width="150" height="100">                        |   **4. GeoJson** For the map, we used Leaflet and geoJson files for the boundaries of the each country. You can find the full geoJson file here https://opendata.arcgis.com/datasets/2b93b06dc0dc4e809d3c8db5cb96ba69_0.geojson.  |
+|         <img src="./static/Image/Geojson.jpg" alt="TP" align='left'  width="150" height="100">                        |   **4. GeoJson:** For the map, we used Leaflet and geoJson files for the boundaries of the each country. You can find the full geoJson file here https://opendata.arcgis.com/datasets/2b93b06dc0dc4e809d3c8db5cb96ba69_0.geojson.  |
 
 <h2 align='center'>ETL</h2>
 
@@ -26,7 +26,29 @@ As a project, we have decided to look into the temperature changes of the differ
 
 <h2 align='center'>Navigation</h2>
 
-Using Flask, the initial html page shows a dropdown option to choose a country, a table of demographics (default United States) and a geoJson map of the world. Once a country is chosen from the dropdown, it will render new charts that display information specific to that country. The header bar is a special kind of chart that shows the increase and decrease of the temperatures by color. Shades of red for warmer and shades of blue for colder. This chart is not interactive, but it sure does look cool. The demographic table will also update. A country can also be chosen by clicking on the country on the map. While the mouse is hovering over the country, a toolTip shows the country name, the population and average temperature change. Since data is not available for all countries, your selection is limited to the highlighted countries on the map. The countries highlighted in red show an average increase in temperature whereas the countires highlighted in blue show a decrease in temperature. After choosing a country and the charts update, the dropdown box is still available to choose a new country or you can navigate back to the homepage by clicking on the world map button on the top. Below is a demo video of the home page. In order to see more, you'll have to navigate to the page and enjoy.
+Data rendered form python Flask API is then used to visualize data on the web client. You can fnd following features:
+Launch Page :  - Dropdown option to choose a country, a table of demographics (default World Info) and a geoJson map of the world. 
+               - Built with HTML, Bootstrap , Jquery.js, JavaScript, Leaflet.js
+Country Selection: - Select a country form the drop down menu or click on the leaflet.js map.
+                   - Jquery.js is used to asynchronously render HTML elements for charts when a country is selected.
+ 
+Demographic Table : When a country on the map is clicked or selected from the dropdown menu, the demographic table will also update with country specific information.
+
+Charts: Once a country is chosen from the dropdown or map, it will render new charts that display information specific to that country. 
+        Warming Stripes chart: Built with Ploty.js , is a special kind of chart that is used as a country header that shows the increase and decrease of the temperatures 
+                               by color. Shades of red for warmer and shades of blue for colder. This chart is not interactive, but it sure does look cool.
+        Line Chart: Built with D3.js shows how average temperature changes over time(Year, season, months). Clicking on individual months and seasons provide
+                    detailed information onhow the temperature has changed since 1960.
+        Pie Chart: Built with D3.js provides overall temperature change from 1960 to 2019. Pie chart is interactive with the line chart. Clicking on a perticular season or 
+                   a month on the pie chart, provides access to the data and trends on the line chart.
+        Temp and Co2 correlation chart: built with D3.js indentifies the relation between countries Co2 production and avg. temp changes over the years. data is color coded as in green being low emission , yellow and orange being intermedient and red being high.
+        
+*Note: All the charts are individually color coded with sessons , months and Co2 emission rate.*
+
+Nagivation button: user cna navigate back to the launch page via navigation button on the top right or selecting *World Info* on the drop down menu.
+  
+  
+ Below is a demo video of the home page. In order to see more, you'll have to navigate to the page and enjoy.
 
 ![demo video](https://user-images.githubusercontent.com/72528267/118071457-6dceab00-b36d-11eb-9dfc-2622e575c764.mp4)
 
