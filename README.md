@@ -59,7 +59,7 @@ Once a country is chosen from the dropdown or map, it will render new charts tha
         - Built with D3.js indentifies the relation between countries Co2 production and avg. temp changes over the years. data is color coded as in green being low emission ,
           yellow and orange being intermedient and red being high.
         
-*Note: All the charts are individually color coded with sessons , months and Co2 emission rate.*
+*Note: All the charts are individually color coded by seasons , months and Co2 emission rate.*
 
 - __Nagivation button:__ User can navigate back to the launch page via navigation button on the top right or selecting *World Info* on the drop down menu.
   
