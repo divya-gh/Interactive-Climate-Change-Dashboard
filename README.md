@@ -15,12 +15,12 @@ As a project, we have decided to look into the temperature changes of the differ
 
 <h2 align='center'>ETL</h2>
 
-<img src="./static/Image/postgresql-logo.png" alt="TP" align='left'  width="80" height="100"> <br/>
+<img src="./static/Image/postgresql-logo.png" alt="TP" align='left'  width="120" height="100"> <br/>
 - Data is queried, cleaned, transformed and loaded to *PostGresDB* using `python pandas`, `SQLAlchemy` . <br/>
 - Find Postgres `Schema` [here](./static/data/climateDB.db.sql).
 ----
 <h2 align='center'>Web Framework</h2>
-<img src="./static/Image/flask_api.jpg" alt="TP" align='left'  width="80" height="100"> <br/>
+<img src="./static/Image/flask_api.jpg" alt="TP" align='left'  width="120" height="100"> <br/>
 - python Flask REST API is implemented to manage HTTP requests and render templates and json serialized data for manipulating the charts. <br/>
 - Find FlaskAPI code [here](./app.py).
 
