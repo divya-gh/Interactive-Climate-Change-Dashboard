@@ -52,11 +52,7 @@ Data rendered form python Flask API is then used to visualize data on the web cl
 - __Nagivation button:__ User cna navigate back to the launch page via navigation button on the top right or selecting *World Info* on the drop down menu.
   
   
- Below is a demo video of the home page. In order to see more, you'll have to navigate to the page and enjoy.
-
-![demo video](https://user-images.githubusercontent.com/72528267/118071457-6dceab00-b36d-11eb-9dfc-2622e575c764.mp4)
-
-<h3 align='center'>Charts</h3>
+<h3 align='center'>ScreenShots</h3>
 
 1. Picture of country with flag(if flag data was found)
 
