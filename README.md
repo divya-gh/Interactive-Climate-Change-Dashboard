@@ -13,38 +13,10 @@ As a project, we have decided to look into the temperature changes of the differ
 |         <img src="./static/Image/webScrape1.png" alt="TP" align='left'  width="150" height="100">                        |   **3. Country demographics:** Since the CO2 emissions can be influenced by the demographics of the country, the dashboard includes current demographics, as of May 2021, so that as you are reviewing the charts, you can see how the demographics might play a role. The demographics were scraped from three different websites using Beautiful Soup. After scraping the websites, the data was pushed into the sqlite database as an additional table.<br><br>- a. __Flags__ - https://www.worldometers.info/geography/flags-of-the-world/<br>- b. __Population__ - https://www.worldometers.info/world-population/population-by-country/<br>-  c. __Latitude and Longitude coordinates__ - https://developers.google.com/public-data/docs/canonical/countries_csv<br>-  *You can find the scrape code [here](https://github.com/divya-gh/Climate-Interactive-Dashboard/blob/main/country_scrape.py).*  |
 |         <img src="./static/Image/Geojson.jpg" alt="TP" align='left'  width="150" height="100">                        |   **4. GeoJson** For the map, we used Leaflet and geoJson files for the boundaries of the each country. You can find the full geoJson file here https://opendata.arcgis.com/datasets/2b93b06dc0dc4e809d3c8db5cb96ba69_0.geojson.  |
 
+<h2 align='center'>ETL</h2>
 
+Data is cleaned, transformed and loaded to PostGres Database. Schema found [here](https://github.com/divya-gh/Climate-Interactive-Dashboard/edit/main/static/data/climateDB.db).
 
-**1. Temperature changes** : 
-
-Data set found [here](https://www.kaggle.com/sevgisarac/temperature-change?select=Environment_Temperature_change_E_All_Data_NOFLAG.csv) shows the changes in temperature in each country from 1961 to 2019. The data is also split up into each month, so that you can compare January vs January, and by season. The changes go anywhere from 9&deg;C cooler to 11&deg;C warmer.
-
-**2. CO2 Emissions**
-
-Temperature fluctuations can be caused by many different events, one of which is CO2 emissions. Each country produces different amounts of CO2 dependent on their access to electricity, the total population, the urban population and other factors. We used the data from https://ourworldindata.org/co2-and-other-greenhouse-gas-emissions and you can find the dataset [here](https://github.com/divya-gh/Climate-Interactive-Dashboard/blob/main/static/data/annual-co-emissions-by-region.csv). 
-
-
-**3. Country demographics**
-
-Since the CO2 emissions can be influenced by the demographics of the country, the dashboard includes current demographics, as of May 2021, so that as you are reviewing the charts, you can see how the demographics might play a role. The demographics were scraped from three different websites using Beautiful Soup. After scraping the websites, the data was pushed into the sqlite database as an additional table.
-
-  a. Flags - https://www.worldometers.info/geography/flags-of-the-world/
-  
-  b. Population - https://www.worldometers.info/world-population/population-by-country/
-  
-  c. Latitude and Longitude coordinates - https://developers.google.com/public-data/docs/canonical/countries_csv
-  
-*You can find the scrape code [here](https://github.com/divya-gh/Climate-Interactive-Dashboard/blob/main/country_scrape.py).*
-
-**4. GeoJson**
-
-For the map, we used Leaflet and geoJson files for the boundaries of the each country. You can find the full geoJson file here https://opendata.arcgis.com/datasets/2b93b06dc0dc4e809d3c8db5cb96ba69_0.geojson. 
-
-**5. Cleaning Data**
-
-After pulling the data in from the csv files, the temperature change file was reduced to only include the temperature changes and not the standard deviations. The null values were also dropped. Any years prior to 1961 were also dropped on the CO2 Emission data to match the temperature change data. After cleaning the data, it was imported into the sqlite database found [here](https://github.com/divya-gh/Climate-Interactive-Dashboard/edit/main/static/data/climateDB.db).
-
-![world climate pic](https://github.com/divya-gh/Climate-Interactive-Dashboard/blob/corters22/Images/Climate%20zones2.png)
 
 <h2 align='center'>Navigation</h2>
 
