@@ -9,14 +9,14 @@ import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, inspect, join, outerjoin, MetaData, Table
-from api_keys import post_key
+from api_keys import post_key , heroku_key
 
 import json
 
 # create engine to postgres
 #connect_string = "sqlite:///static/data/climateDB.db"
 #connect_string = f"postgresql://{post_key}:{post_key}@localhost:5432/ClimateChange_db"
-connect_string = "postgresql://oaheorhjxkaftv:3148f648a78cb8638b4d9cce881182545de3c9854875a22dba0d128f1ae99419@ec2-34-193-112-164.compute-1.amazonaws.com:5432/d6v5es98cgcvov"
+connect_string = f"postgresql://{heroku_key}"
 
 
 # reflect the tables
