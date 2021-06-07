@@ -26,7 +26,7 @@ As a project, we have decided to look into the temperature changes of the differ
 
 <h2 align='center'>Navigation</h2>
 
-Data rendered form python Flask API is then used to visualize data on the web client. You can fnd following features:
+Data rendered form python Flask API is then used to visualize data on the web client. User can find following features:
 
 - __Launch Page :__  
     - Dropdown option to choose a country, a table of demographics (default World Info) and a geoJson map of the world. 
