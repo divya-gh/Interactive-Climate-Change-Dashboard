@@ -79,6 +79,7 @@ Once a country is chosen from the dropdown or map, it will render new charts tha
 ![Mini map](https://github.com/divya-gh/Climate-Interactive-Dashboard/blob/main/static/Image/screenshot-minimap.PNG)
 
 4. Line Chart
+
 ![line chart](https://github.com/divya-gh/Climate-Interactive-Dashboard/blob/main/static/Image/screenshot-line-chart.PNG)
 
 5. Pie Chart
