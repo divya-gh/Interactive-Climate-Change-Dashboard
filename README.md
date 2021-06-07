@@ -36,7 +36,8 @@ Data rendered form python Flask API is then used to visualize data on the web cl
  
 - __Demographic Table :__ When a country on the map is clicked or selected from the dropdown menu, the demographic table will also update with country specific information.
 
-- __Charts:__ Once a country is chosen from the dropdown or map, it will render new charts that display information specific to that country. 
+- __Charts:__  - Once a country is chosen from the dropdown or map, it will render new charts that display information specific to that country. 
+               - Charts are built with leaflet.js, Plotly.js and D3.js
 
    - __Warming Stripes chart:__ Built with Ploty.js , is a special kind of chart that is used as a country header that shows the increase and decrease of the temperatures 
                                      by color. Shades of red for warmer and shades of blue for colder. This chart is not interactive, but it sure does look cool.
