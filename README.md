@@ -15,19 +15,18 @@ As a project, we have decided to look into the temperature changes of the differ
 
 <h2 align='center'>ETL</h2>
 
-<img src="./static/Image/webScrape1.png" alt="TP" align='left'  width="80" height="100"> <br/>
+<img src="./static/Image/postgresql-logo.png" alt="TP" align='left'  width="80" height="100"> <br/>
 - Data is queried, cleaned, transformed and loaded to *PostGresDB* using `python pandas`, `SQLAlchemy` . <br/>
 - Find Postgres `Schema` [here](./static/data/climateDB.db.sql).
 ----
 <h2 align='center'>Web Framework</h2>
-<img src="./static/Image/webScrape1.png" alt="TP" align='left'  width="80" height="100"> <br/>
+<img src="./static/Image/flask_api.jpg" alt="TP" align='left'  width="80" height="100"> <br/>
 - python Flask REST API is implemented to manage HTTP requests and render templates and json serialized data for manipulating the charts. <br/>
 - Find FlaskAPI code [here](./app.py).
 
 <h2 align='center'>Navigation</h2>
 
-<img src="./static/Image/webScrape1.png" alt="TP" align='left'  width="80" height="100"> <br/>
-- Using Flask, the initial html page shows a dropdown option to choose a country, a table of demographics (default United States) and a geoJson map of the world. Once a country is chosen from the dropdown, it will render new charts that display information specific to that country. The header bar is a special kind of chart that shows the increase and decrease of the temperatures by color. Shades of red for warmer and shades of blue for colder. This chart is not interactive, but it sure does look cool. The demographic table will also update. A country can also be chosen by clicking on the country on the map. While the mouse is hovering over the country, a toolTip shows the country name, the population and average temperature change. Since data is not available for all countries, your selection is limited to the highlighted countries on the map. The countries highlighted in red show an average increase in temperature whereas the countires highlighted in blue show a decrease in temperature. After choosing a country and the charts update, the dropdown box is still available to choose a new country or you can navigate back to the homepage by clicking on the world map button on the top. Below is a demo video of the home page. In order to see more, you'll have to navigate to the page and enjoy.
+Using Flask, the initial html page shows a dropdown option to choose a country, a table of demographics (default United States) and a geoJson map of the world. Once a country is chosen from the dropdown, it will render new charts that display information specific to that country. The header bar is a special kind of chart that shows the increase and decrease of the temperatures by color. Shades of red for warmer and shades of blue for colder. This chart is not interactive, but it sure does look cool. The demographic table will also update. A country can also be chosen by clicking on the country on the map. While the mouse is hovering over the country, a toolTip shows the country name, the population and average temperature change. Since data is not available for all countries, your selection is limited to the highlighted countries on the map. The countries highlighted in red show an average increase in temperature whereas the countires highlighted in blue show a decrease in temperature. After choosing a country and the charts update, the dropdown box is still available to choose a new country or you can navigate back to the homepage by clicking on the world map button on the top. Below is a demo video of the home page. In order to see more, you'll have to navigate to the page and enjoy.
 
 ![demo video](https://user-images.githubusercontent.com/72528267/118071457-6dceab00-b36d-11eb-9dfc-2622e575c764.mp4)
 
