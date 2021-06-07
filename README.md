@@ -6,6 +6,7 @@ This is a question that has been on everyone's mind since June 23, 1988 when Dr 
 As a project, we have decided to look into the temperature changes of the different countries of the world, spanning a time period of over 60 years, and created a dashboard depicting those changes. This dashboard contains current demographics of each country and has multiple charts that interact with each other to visually display how the temperatures have changed.
 
 <h2 align='center'>Data</h2>
+
 | First Header  | Second Header |
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
