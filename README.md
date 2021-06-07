@@ -45,7 +45,7 @@ Data rendered form python Flask API is then used to visualize data on the web cl
 
    - __Warming Stripes chart:__ 
         - Built with Ploty.js , is a special kind of chart that is used as a country header that shows the increase and decrease of the temperatures by color. 
-          Shades of red for warmer and shades of blue for colder. This chart is not interactive, but it sure does look cool.\
+          Shades of red for warmer and shades of blue for colder. This chart is not interactive, but it sure does look cool.
    - __Country Map :__ 
         - Built with Leaflet.js shows map of the selected country and its overall temperature change and Co2 emission over time.
                        - Country flag has been used as legend.
