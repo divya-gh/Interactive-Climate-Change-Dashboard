@@ -28,29 +28,37 @@ As a project, we have decided to look into the temperature changes of the differ
 
 Data rendered form python Flask API is then used to visualize data on the web client. You can fnd following features:
 
-- __Launch Page :__  - Dropdown option to choose a country, a table of demographics (default World Info) and a geoJson map of the world. 
-                     - Built with HTML, Bootstrap , Jquery.js, JavaScript, Leaflet.js
+- __Launch Page :__  
+    - Dropdown option to choose a country, a table of demographics (default World Info) and a geoJson map of the world. 
+    - Built with HTML, Bootstrap , Jquery.js, JavaScript, Leaflet.js
                
-- __Country Selection:__  - Select a country form the drop down menu or click on the leaflet.js map.
-                          - Jquery.js is used to asynchronously render HTML elements for charts when a country is selected.
+- __Country Selection:__  
+    - Select a country form the drop down menu or click on the leaflet.js map.
+    - Jquery.js is used to asynchronously render HTML elements for charts when a country is selected.
  
-- __Demographic Table :__ When a country on the map is clicked or selected from the dropdown menu, the demographic table will also update with country specific information.
+- __Demographic Table :__ 
+    - When a country on the map is clicked or selected from the dropdown menu, the demographic table will also update with country specific information.
 
-- __Charts:__  - Once a country is chosen from the dropdown or map, it will render new charts that display information specific to that country. 
-               - Charts are built with leaflet.js, Plotly.js and D3.js
+- __Charts:__  
+    - Once a country is chosen from the dropdown or map, it will render new charts that display information specific to that country. 
+    - Charts are built with leaflet.js, Plotly.js and D3.js
 
-   - __Warming Stripes chart:__ Built with Ploty.js , is a special kind of chart that is used as a country header that shows the increase and decrease of the temperatures 
-                                     by color. Shades of red for warmer and shades of blue for colder. This chart is not interactive, but it sure does look cool.
-   - __Country Map :__ - Built with Leaflet.js shows map of the selected country and its overall temperature change and Co2 emission over time.
+   - __Warming Stripes chart:__ 
+        - Built with Ploty.js , is a special kind of chart that is used as a country header that shows the increase and decrease of the temperatures by color. 
+          Shades of red for warmer and shades of blue for colder. This chart is not interactive, but it sure does look cool.\
+   - __Country Map :__ 
+        - Built with Leaflet.js shows map of the selected country and its overall temperature change and Co2 emission over time.
                        - Country flag has been used as legend.
    - __Line Chart:__ Built with D3.js ,        
-      - Shows all the temperature changes for each month of the years for the chosen country.
-      - By clicking on Seasons or Months, you can see all the data for or navigate to a specific season/month over time since 1960. 
-      - Hovering over the markers will show the value of the temperature change.
-   - __Pie Chart:__ Built with D3.js provides overall temperature change from 1960 to 2019. Pie chart is interactive with the line chart. Clicking on a perticular season or 
-                    a month on the pie chart, provides access to the data and trends on the line chart.
-   - __Temp and Co2 correlation chart:__ Built with D3.js indentifies the relation between countries Co2 production and avg. temp changes over the years. data is 
-                                         color coded as in green being low emission , yellow and orange being intermedient and red being high.
+        - Shows all the temperature changes for each month of the years for the chosen country.
+        - By clicking on Seasons or Months, you can see all the data for or navigate to a specific season/month over time since 1960. 
+        - Hovering over the markers will show the value of the temperature change.
+   - __Pie Chart:__ 
+        - Built with D3.js provides overall temperature change from 1960 to 2019. Pie chart is interactive with the line chart. Clicking on a perticular season or 
+          a month on the pie chart, provides access to the data and trends on the line chart.
+   - __Temp and Co2 correlation chart:__ 
+        - Built with D3.js indentifies the relation between countries Co2 production and avg. temp changes over the years. data is color coded as in green being low emission ,
+          yellow and orange being intermedient and red being high.
         
 *Note: All the charts are individually color coded with sessons , months and Co2 emission rate.*
 
