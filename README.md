@@ -15,7 +15,7 @@ As a project, we have decided to look into the temperature changes of the differ
 
 <h2 align='center'>ETL</h2>
 
-Data is cleaned, transformed and loaded to PostGres Database. Schema found [here](https://github.com/divya-gh/Climate-Interactive-Dashboard/edit/main/static/data/climateDB.db).
+<img src="./static/Image/webScrape1.png" alt="TP" align='left'  width="150" height="100"> - Data is queried cleaned, transformed and loaded to PostGresDB using python pandas, SQLAlchemy . - Find Postgres Schema [here](https://github.com/divya-gh/Climate-Interactive-Dashboard/edit/main/static/data/climateDB.db).
 
 
 <h2 align='center'>Navigation</h2>
