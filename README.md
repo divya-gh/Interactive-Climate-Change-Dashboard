@@ -40,8 +40,12 @@ Data rendered form python Flask API is then used to visualize data on the web cl
 
    - __Warming Stripes chart:__ Built with Ploty.js , is a special kind of chart that is used as a country header that shows the increase and decrease of the temperatures 
                                      by color. Shades of red for warmer and shades of blue for colder. This chart is not interactive, but it sure does look cool.
-   - __Line Chart:__ Built with D3.js shows how average temperature changes over time(Year, season, months). Clicking on individual months and seasons provide
-                     detailed information onhow the temperature has changed since 1960.
+   - __Country Map :__ - Built with Leaflet.js shows map of the selected country and its overall temperature change and Co2 emission over time.
+                       - Country flag has been used as legend.
+   - __Line Chart:__ Built with D3.js ,     
+                          + Shows all the temperature changes for each month of the years for the chosen country.
+                          + By clicking on Seasons or Months, you can see all the data for or navigate to a specific season/month over time since 1960. 
+                          + Hovering over the markers will show the value of the temperature change.
    - __Pie Chart:__ Built with D3.js provides overall temperature change from 1960 to 2019. Pie chart is interactive with the line chart. Clicking on a perticular season or 
                     a month on the pie chart, provides access to the data and trends on the line chart.
    - __Temp and Co2 correlation chart:__ Built with D3.js indentifies the relation between countries Co2 production and avg. temp changes over the years. data is 
@@ -49,32 +53,31 @@ Data rendered form python Flask API is then used to visualize data on the web cl
         
 *Note: All the charts are individually color coded with sessons , months and Co2 emission rate.*
 
-- __Nagivation button:__ User cna navigate back to the launch page via navigation button on the top right or selecting *World Info* on the drop down menu.
+- __Nagivation button:__ User can navigate back to the launch page via navigation button on the top right or selecting *World Info* on the drop down menu.
   
   
 <h3 align='center'>ScreenShots</h3>
 
-1. Picture of country with flag(if flag data was found)
+1. Launch Page: World Map and Demographic Information Table
 
-![mini-map pic](https://github.com/divya-gh/Climate-Interactive-Dashboard/blob/main/static/Image/screenshot-minimap.PNG)
+![launch Page](https://github.com/divya-gh/Climate-Interactive-Dashboard/blob/main/static/Image/screenshot-minimap.PNG)
 
-2. Line Chart
+2. Warming Stripes Header
 
-    + Shows all the temperature changes for each month of the years for the chosen country.
-    + By clicking on Seasons or Months, you can see all the data for or navigate to a specific season/month for that country. 
-    + Hovering over the markers will show the value of the temperature change.
+![warming stripes](https://github.com/divya-gh/Climate-Interactive-Dashboard/blob/main/static/Image/screenshot-warming-stripes.PNG)
 
+3. Country Map
+
+![Mini map](https://github.com/divya-gh/Climate-Interactive-Dashboard/blob/main/static/Image/screenshot-minimap.PNG)
+
+4. Line Chart
 ![line chart](https://github.com/divya-gh/Climate-Interactive-Dashboard/blob/main/static/Image/screenshot-line-chart.PNG)
 
-3. Pie Chart
-
-    + With this chart, you can see the data specific to the seasons.
+5. Pie Chart
 
 ![pie chart](https://github.com/divya-gh/Climate-Interactive-Dashboard/blob/main/static/Image/screenshot-piechart.PNG)
 
 4. Scatter Plot
-
-    + Shows a correlation of temperature change and year. The size and color of the markers coordinate with population and CO2 emissions. 
 
 ![scatter](https://github.com/divya-gh/Climate-Interactive-Dashboard/blob/main/static/Image/screenshot-scatter-chart.PNG)
 
@@ -102,21 +105,8 @@ Data rendered form python Flask API is then used to visualize data on the web cl
 5. Bootstrap
 6. HTML
 
-<h3 align='center'>Additional ScreenShots</h3>
 
-1. Demo box
-
-![demo](https://github.com/divya-gh/Climate-Interactive-Dashboard/blob/main/static/Image/screenshot-demo.PNG)
-
-2. Home page
-
-![home page](https://github.com/divya-gh/Climate-Interactive-Dashboard/blob/main/static/Image/screenshot-large-map.PNG)
-
-3. Warming Stripes header
-
-![warming stripes](https://github.com/divya-gh/Climate-Interactive-Dashboard/blob/main/static/Image/screenshot-warming-stripes.PNG)
-
-<h3 align='center'>Files</h3>
+<h3 align='center'>Source Code</h3>
 
 1. [Climate.py](https://github.com/divya-gh/Climate-Interactive-Dashboard/blob/main/climate.py)
     -contains functions to pull necessary data from database
