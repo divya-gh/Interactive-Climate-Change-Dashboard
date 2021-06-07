@@ -131,5 +131,3 @@ Data rendered form python Flask API is then used to visualize data on the web cl
 
 
 
-[(1)](https://theconversation.com/30-years-ago-global-warming-became-front-page-news-and-both-republicans-and-democrats-took-it-seriously-97658#:~:text=June%2023%2C%201988%20marked%20the,change%20became%20a%20national%20issue).
-
