@@ -27,25 +27,27 @@ As a project, we have decided to look into the temperature changes of the differ
 <h2 align='center'>Navigation</h2>
 
 Data rendered form python Flask API is then used to visualize data on the web client. You can fnd following features:
-Launch Page :  - Dropdown option to choose a country, a table of demographics (default World Info) and a geoJson map of the world. 
-               - Built with HTML, Bootstrap , Jquery.js, JavaScript, Leaflet.js
-Country Selection: - Select a country form the drop down menu or click on the leaflet.js map.
-                   - Jquery.js is used to asynchronously render HTML elements for charts when a country is selected.
- 
-Demographic Table : When a country on the map is clicked or selected from the dropdown menu, the demographic table will also update with country specific information.
 
-Charts: Once a country is chosen from the dropdown or map, it will render new charts that display information specific to that country. 
-        Warming Stripes chart: Built with Ploty.js , is a special kind of chart that is used as a country header that shows the increase and decrease of the temperatures 
+- __Launch Page :__  - Dropdown option to choose a country, a table of demographics (default World Info) and a geoJson map of the world. 
+                     - Built with HTML, Bootstrap , Jquery.js, JavaScript, Leaflet.js
+               
+- __Country Selection:__  - Select a country form the drop down menu or click on the leaflet.js map.
+                          - Jquery.js is used to asynchronously render HTML elements for charts when a country is selected.
+ 
+- __Demographic Table :__ When a country on the map is clicked or selected from the dropdown menu, the demographic table will also update with country specific information.
+
+- __Charts:__ Once a country is chosen from the dropdown or map, it will render new charts that display information specific to that country. 
+        - Warming Stripes chart: Built with Ploty.js , is a special kind of chart that is used as a country header that shows the increase and decrease of the temperatures 
                                by color. Shades of red for warmer and shades of blue for colder. This chart is not interactive, but it sure does look cool.
-        Line Chart: Built with D3.js shows how average temperature changes over time(Year, season, months). Clicking on individual months and seasons provide
+        - Line Chart: Built with D3.js shows how average temperature changes over time(Year, season, months). Clicking on individual months and seasons provide
                     detailed information onhow the temperature has changed since 1960.
-        Pie Chart: Built with D3.js provides overall temperature change from 1960 to 2019. Pie chart is interactive with the line chart. Clicking on a perticular season or 
+        - Pie Chart: Built with D3.js provides overall temperature change from 1960 to 2019. Pie chart is interactive with the line chart. Clicking on a perticular season or 
                    a month on the pie chart, provides access to the data and trends on the line chart.
-        Temp and Co2 correlation chart: built with D3.js indentifies the relation between countries Co2 production and avg. temp changes over the years. data is color coded as in green being low emission , yellow and orange being intermedient and red being high.
+        - Temp and Co2 correlation chart: built with D3.js indentifies the relation between countries Co2 production and avg. temp changes over the years. data is color coded as in green being low emission , yellow and orange being intermedient and red being high.
         
 *Note: All the charts are individually color coded with sessons , months and Co2 emission rate.*
 
-Nagivation button: user cna navigate back to the launch page via navigation button on the top right or selecting *World Info* on the drop down menu.
+- __Nagivation button:__ User cna navigate back to the launch page via navigation button on the top right or selecting *World Info* on the drop down menu.
   
   
  Below is a demo video of the home page. In order to see more, you'll have to navigate to the page and enjoy.
