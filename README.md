@@ -1,4 +1,4 @@
-### Heroku App - https://climate-changedashboard.herokuapp.com/
+
 ![thermometer pic](https://github.com/divya-gh/Climate-Interactive-Dashboard/blob/corters22/Images/thermometer%20pic.png)
 
 This is a question that has been on everyone's mind since June 23, 1988 when Dr James Hansen, director of NASA's Institute for Space Studies testified before the US Senate[(1)]. Since that time, climate change has moved more and more from a scientific debate to a political one. There have been numerous studies done to see if CO2 emissions are being reduced, the changes of the Earth's temperature, and its affects on our future. 
