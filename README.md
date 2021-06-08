@@ -66,7 +66,7 @@ Once a country is chosen from the dropdown or map, it will render new charts tha
 <h2 align='center'>Deployment</h2>
 <img src="./static/Image/deploy-to-heroku.png" alt="TP" align='left'  width="80" height="80"> <br/>
 - app
-
+---
 
   
 <h2 align='center'>ScreenShots</h2>
